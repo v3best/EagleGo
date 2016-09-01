@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:Manifest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:manifest="http://www.xilinx.com/manifest">
+    <template location="identi" name="identi objects demo" description="cmos in->identi->hdmi out">
+        <supports>
+            <and>
+                <os name="Standalone"/>
+            </and>
+        </supports>
+        <accelerator name="mmult" 		 location="mult_core.c"/>
+        <includepaths>
+        	<path location="identi"/>
+        </includepaths>
+    </template>
+    <template location="sobel" name="sobel demo" description="cmos in->soble->hdmi out">
+        <supports>
+            <and>
+                <os name="Standalone"/>
+            </and>
+        </supports>
+        <accelerator name="rgb_2_gray" 		 location="rgb_2_gray.c"/>
+        <accelerator name="sharpen_filter" location="sharpen.c"/>
+        <accelerator name="sobel_filter" 	 location="edge_detect.c"/>
+        <accelerator name="gray_2_gray3" 	 location="gray_2_gray3.c"/>
+        <includepaths>
+        	<path location="sobel"/>
+        </includepaths>
+    </template>
+</manifest:Manifest>
